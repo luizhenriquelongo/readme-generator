@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 
 homepage = Blueprint(
@@ -11,4 +11,7 @@ homepage = Blueprint(
 
 @homepage.route('/', methods=['GET', 'POST'])
 def home():
-    return "README.md Generator"
+    if request.method == 'POST':
+        print(request.form.get('editordata'))
+        return str(request.form.get('editordata'))
+    return render_template('index.html')
