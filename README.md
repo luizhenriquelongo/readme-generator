@@ -1,6 +1,6 @@
 # README.md Generator
 
-**Note:** *This application is still in development, so are not completed.*
+**Note:** *This application is still in development*
 
 ## Use:
 
